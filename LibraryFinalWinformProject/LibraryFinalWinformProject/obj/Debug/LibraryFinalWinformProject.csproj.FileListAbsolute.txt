@@ -1,0 +1,11 @@
+C:\Users\KananRv\source\repos\LibraryFinalWinformProject\LibraryFinalWinformProject\bin\Debug\LibraryFinalWinformProject.exe.config
+C:\Users\KananRv\source\repos\LibraryFinalWinformProject\LibraryFinalWinformProject\bin\Debug\LibraryFinalWinformProject.exe
+C:\Users\KananRv\source\repos\LibraryFinalWinformProject\LibraryFinalWinformProject\bin\Debug\LibraryFinalWinformProject.pdb
+C:\Users\KananRv\source\repos\LibraryFinalWinformProject\LibraryFinalWinformProject\obj\Debug\LibraryFinalWinformProject.csprojResolveAssemblyReference.cache
+C:\Users\KananRv\source\repos\LibraryFinalWinformProject\LibraryFinalWinformProject\obj\Debug\LibraryFinalWinformProject.Form1.resources
+C:\Users\KananRv\source\repos\LibraryFinalWinformProject\LibraryFinalWinformProject\obj\Debug\LibraryFinalWinformProject.Properties.Resources.resources
+C:\Users\KananRv\source\repos\LibraryFinalWinformProject\LibraryFinalWinformProject\obj\Debug\LibraryFinalWinformProject.csproj.GenerateResource.Cache
+C:\Users\KananRv\source\repos\LibraryFinalWinformProject\LibraryFinalWinformProject\obj\Debug\LibraryFinalWinformProject.csproj.CoreCompileInputs.cache
+C:\Users\KananRv\source\repos\LibraryFinalWinformProject\LibraryFinalWinformProject\obj\Debug\LibraryFinalWinformProject.exe
+C:\Users\KananRv\source\repos\LibraryFinalWinformProject\LibraryFinalWinformProject\obj\Debug\LibraryFinalWinformProject.pdb
+C:\Users\KananRv\source\repos\LibraryFinalWinformProject\LibraryFinalWinformProject\obj\Debug\LibraryFinalWinformProject.Register.resources
