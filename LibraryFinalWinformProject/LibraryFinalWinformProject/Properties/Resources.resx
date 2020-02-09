@@ -118,8 +118,32 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="888655-download-free-library-background-images-1920x1200" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\888655-download-free-library-background-images-1920x1200.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="man2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\man2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="whitLtr" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\whitLtr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="okaLtr" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\okaLtr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new-background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new-background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RSsInv" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RSsInv.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="istockphoto-499198960-612x612" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\istockphoto-499198960-612x612.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="makefg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\makefg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1200px-Vasily_Perov_-_Портрет_Ф.М.Достоевского_-_Google_Art_Project" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1200px-Vasily_Perov_-_Портрет_Ф.М.Достоевского_-_Google_Art_Project.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="makefgsadsada" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\makefgsadsada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -127,7 +151,7 @@
   <data name="man1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\man1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="man2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\man2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="wooden-table_36051-46" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wooden-table_36051-46.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

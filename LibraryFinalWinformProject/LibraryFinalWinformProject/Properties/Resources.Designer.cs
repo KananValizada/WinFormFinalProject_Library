@@ -19,7 +19,7 @@ namespace LibraryFinalWinformProject.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -63,6 +63,36 @@ namespace LibraryFinalWinformProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1200px_Vasily_Perov___Портрет_Ф_М_Достоевского___Google_Art_Project {
+            get {
+                object obj = ResourceManager.GetObject("1200px-Vasily_Perov_-_Портрет_Ф.М.Достоевского_-_Google_Art_Project", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _888655_download_free_library_background_images_1920x1200 {
+            get {
+                object obj = ResourceManager.GetObject("888655-download-free-library-background-images-1920x1200", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap istockphoto_499198960_612x612 {
+            get {
+                object obj = ResourceManager.GetObject("istockphoto-499198960-612x612", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap makefg {
             get {
                 object obj = ResourceManager.GetObject("makefg", resourceCulture);
@@ -96,6 +126,56 @@ namespace LibraryFinalWinformProject.Properties {
         internal static System.Drawing.Bitmap man2 {
             get {
                 object obj = ResourceManager.GetObject("man2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap new_background {
+            get {
+                object obj = ResourceManager.GetObject("new-background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap okaLtr {
+            get {
+                object obj = ResourceManager.GetObject("okaLtr", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RSsInv {
+            get {
+                object obj = ResourceManager.GetObject("RSsInv", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap whitLtr {
+            get {
+                object obj = ResourceManager.GetObject("whitLtr", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wooden_table_36051_46 {
+            get {
+                object obj = ResourceManager.GetObject("wooden-table_36051-46", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
