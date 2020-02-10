@@ -30,6 +30,7 @@ namespace LibraryFinalWinformProject.Models
         public int AvaliableQuantity { get; set; }
         public BookAuthor Author { get; set; }
         public BookJanra Janra { get; set; }
+        public List<Order> Orders { get; set; }
 
     }
 }

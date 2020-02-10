@@ -37,11 +37,14 @@
             this.menuAddAuthor = new System.Windows.Forms.ToolStripMenuItem();
             this.bookListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.orToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.createAnOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuCreateAnOrder = new System.Windows.Forms.ToolStripMenuItem();
             this.listOfOrdersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deadlineTodayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deadlineTomorrowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.overdueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.costumersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuAddNewCostumer = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuCostumerList = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,7 +54,8 @@
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.booksToolStripMenuItem,
-            this.orToolStripMenuItem});
+            this.orToolStripMenuItem,
+            this.costumersToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 25);
@@ -117,17 +121,18 @@
             // orToolStripMenuItem
             // 
             this.orToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.createAnOrderToolStripMenuItem,
+            this.menuCreateAnOrder,
             this.listOfOrdersToolStripMenuItem});
             this.orToolStripMenuItem.Name = "orToolStripMenuItem";
             this.orToolStripMenuItem.Size = new System.Drawing.Size(61, 21);
             this.orToolStripMenuItem.Text = "Orders";
             // 
-            // createAnOrderToolStripMenuItem
+            // menuCreateAnOrder
             // 
-            this.createAnOrderToolStripMenuItem.Name = "createAnOrderToolStripMenuItem";
-            this.createAnOrderToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
-            this.createAnOrderToolStripMenuItem.Text = "Create an Order";
+            this.menuCreateAnOrder.Name = "menuCreateAnOrder";
+            this.menuCreateAnOrder.Size = new System.Drawing.Size(180, 22);
+            this.menuCreateAnOrder.Text = "Create an Order";
+            this.menuCreateAnOrder.Click += new System.EventHandler(this.menuCreateAnOrder_Click);
             // 
             // listOfOrdersToolStripMenuItem
             // 
@@ -136,7 +141,7 @@
             this.deadlineTomorrowToolStripMenuItem,
             this.overdueToolStripMenuItem});
             this.listOfOrdersToolStripMenuItem.Name = "listOfOrdersToolStripMenuItem";
-            this.listOfOrdersToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.listOfOrdersToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.listOfOrdersToolStripMenuItem.Text = "List of Orders";
             // 
             // deadlineTodayToolStripMenuItem
@@ -156,6 +161,29 @@
             this.overdueToolStripMenuItem.Name = "overdueToolStripMenuItem";
             this.overdueToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.overdueToolStripMenuItem.Text = "Overdue";
+            // 
+            // costumersToolStripMenuItem
+            // 
+            this.costumersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuAddNewCostumer,
+            this.menuCostumerList});
+            this.costumersToolStripMenuItem.Name = "costumersToolStripMenuItem";
+            this.costumersToolStripMenuItem.Size = new System.Drawing.Size(82, 21);
+            this.costumersToolStripMenuItem.Text = "Costumers";
+            // 
+            // menuAddNewCostumer
+            // 
+            this.menuAddNewCostumer.Name = "menuAddNewCostumer";
+            this.menuAddNewCostumer.Size = new System.Drawing.Size(190, 22);
+            this.menuAddNewCostumer.Text = "Add New Costumer";
+            this.menuAddNewCostumer.Click += new System.EventHandler(this.menuAddNewCostumer_Click);
+            // 
+            // menuCostumerList
+            // 
+            this.menuCostumerList.Name = "menuCostumerList";
+            this.menuCostumerList.Size = new System.Drawing.Size(190, 22);
+            this.menuCostumerList.Text = "Costumer List";
+            this.menuCostumerList.Click += new System.EventHandler(this.menuCostumerList_Click);
             // 
             // Dashboard
             // 
@@ -186,10 +214,13 @@
         private System.Windows.Forms.ToolStripMenuItem menuAddAuthor;
         private System.Windows.Forms.ToolStripMenuItem bookListToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem orToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem createAnOrderToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menuCreateAnOrder;
         private System.Windows.Forms.ToolStripMenuItem listOfOrdersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deadlineTodayToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deadlineTomorrowToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem overdueToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem costumersToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menuAddNewCostumer;
+        private System.Windows.Forms.ToolStripMenuItem menuCostumerList;
     }
 }

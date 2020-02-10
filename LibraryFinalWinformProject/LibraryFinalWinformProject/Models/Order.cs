@@ -15,13 +15,20 @@ namespace LibraryFinalWinformProject.Models
         [ForeignKey("Person")]
         public int PersonId { get; set; }
         [Required]
+        [ForeignKey("Book")]
+        public int BookId { get; set; }
+        [Required]
         [ForeignKey("User")]
         public int UserId { get; set; }
+        [Required]
+        public decimal overdueDebt { get; set; }
         [Required]
         public DateTime Date { get; set; }
         [Required]
         public DateTime Deadline { get; set; }
-        public Person Person { get; set; }
+        public Person Person { get; set; } 
+        public Book Book { get; set; }
         public User User { get; set; }
+       
     }
 }

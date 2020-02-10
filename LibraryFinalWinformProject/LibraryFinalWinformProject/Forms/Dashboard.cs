@@ -42,5 +42,23 @@ namespace LibraryFinalWinformProject.Forms
             BookList BlForm = new BookList();
             BlForm.Show();
         }
+
+        private void menuAddNewCostumer_Click(object sender, EventArgs e)
+        {
+            AddCostumer AcForm = new AddCostumer();
+            AcForm.Show();
+        }
+
+        private void menuCostumerList_Click(object sender, EventArgs e)
+        {
+            CostumerList ClForm = new CostumerList();
+            ClForm.Show();
+        }
+
+        private void menuCreateAnOrder_Click(object sender, EventArgs e)
+        {
+            Create_Order CoForm = new Create_Order();
+            CoForm.Show();
+        }
     }
 }
