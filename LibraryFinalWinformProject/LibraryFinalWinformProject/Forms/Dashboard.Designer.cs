@@ -45,6 +45,7 @@
             this.costumersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuAddNewCostumer = new System.Windows.Forms.ToolStripMenuItem();
             this.menuCostumerList = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnExit = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -130,7 +131,7 @@
             // menuCreateAnOrder
             // 
             this.menuCreateAnOrder.Name = "menuCreateAnOrder";
-            this.menuCreateAnOrder.Size = new System.Drawing.Size(180, 22);
+            this.menuCreateAnOrder.Size = new System.Drawing.Size(171, 22);
             this.menuCreateAnOrder.Text = "Create an Order";
             this.menuCreateAnOrder.Click += new System.EventHandler(this.menuCreateAnOrder_Click);
             // 
@@ -141,7 +142,7 @@
             this.deadlineTomorrowToolStripMenuItem,
             this.overdueToolStripMenuItem});
             this.listOfOrdersToolStripMenuItem.Name = "listOfOrdersToolStripMenuItem";
-            this.listOfOrdersToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listOfOrdersToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.listOfOrdersToolStripMenuItem.Text = "List of Orders";
             // 
             // deadlineTodayToolStripMenuItem
@@ -185,6 +186,18 @@
             this.menuCostumerList.Text = "Costumer List";
             this.menuCostumerList.Click += new System.EventHandler(this.menuCostumerList_Click);
             // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.White;
+            this.btnExit.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Location = new System.Drawing.Point(730, 0);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(58, 25);
+            this.btnExit.TabIndex = 1;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -192,7 +205,9 @@
             this.BackgroundImage = global::LibraryFinalWinformProject.Properties.Resources._888655_download_free_library_background_images_1920x1200;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Dashboard";
             this.Text = "Dashboard";
@@ -222,5 +237,6 @@
         private System.Windows.Forms.ToolStripMenuItem costumersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem menuAddNewCostumer;
         private System.Windows.Forms.ToolStripMenuItem menuCostumerList;
+        private System.Windows.Forms.Button btnExit;
     }
 }

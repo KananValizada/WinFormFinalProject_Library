@@ -117,9 +117,9 @@
     <Compile Include="Forms\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202002101834006_OrderUptated.cs" />
-    <Compile Include="Migrations\202002101834006_OrderUptated.designer.cs">
-      <DependentUpon>202002101834006_OrderUptated.cs</DependentUpon>
+    <Compile Include="Migrations\202002111508516_Classroom.cs" />
+    <Compile Include="Migrations\202002111508516_Classroom.designer.cs">
+      <DependentUpon>202002111508516_Classroom.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Book.cs" />
@@ -166,8 +166,8 @@
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202002101834006_OrderUptated.resx">
-      <DependentUpon>202002101834006_OrderUptated.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202002111508516_Classroom.resx">
+      <DependentUpon>202002111508516_Classroom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -72,7 +72,7 @@ namespace LibraryFinalWinformProject
         private void timer1_Tick(object sender, EventArgs e)
         {
             frm2.Left += 10;
-            if(frm2.Left >= 630)
+            if(frm2.Left >= 830)
             {
                 timer1.Stop();
                 this.TopMost = false;
@@ -84,7 +84,7 @@ namespace LibraryFinalWinformProject
         private void timer2_Tick(object sender, EventArgs e)
         {
             frm2.Left -= 10;
-            if (frm2.Left <= 325)
+            if (frm2.Left <= 620)
             {
                 
                 timer2.Stop();
@@ -108,9 +108,11 @@ namespace LibraryFinalWinformProject
 
             if (user!=null)
             {
-                Dashboard dashboard = new Dashboard();
+                Dashboard dashboard = new Dashboard(this,txtLgnUserName.Text);
                 dashboard.Show();
-                this.Hide();
+               
+
+               
                 return;
             }
 

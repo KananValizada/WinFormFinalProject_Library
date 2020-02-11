@@ -7,13 +7,13 @@ namespace LibraryFinalWinformProject.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.0")]
-    public sealed partial class OrderUptated : IMigrationMetadata
+    public sealed partial class Classroom : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(OrderUptated));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Classroom));
         
         string IMigrationMetadata.Id
         {
-            get { return "202002101834006_OrderUptated"; }
+            get { return "202002111508516_Classroom"; }
         }
         
         string IMigrationMetadata.Source

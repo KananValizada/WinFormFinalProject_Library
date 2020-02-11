@@ -12,11 +12,15 @@ namespace LibraryFinalWinformProject.Forms
 {
     public partial class Dashboard : Form
     {
-
-        public Dashboard()
+        private readonly Login _login;
+        private readonly string _username;
+        public Dashboard( Login login,string username)
         {
 
             InitializeComponent();
+            _login = login;
+            _login.Hide();
+            _username = username;
         }
 
         private void MenuAddBook_Click(object sender, EventArgs e)
@@ -57,8 +61,13 @@ namespace LibraryFinalWinformProject.Forms
 
         private void menuCreateAnOrder_Click(object sender, EventArgs e)
         {
-            Create_Order CoForm = new Create_Order();
+            Create_Order CoForm = new Create_Order(_username);
             CoForm.Show();
+        }
+
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

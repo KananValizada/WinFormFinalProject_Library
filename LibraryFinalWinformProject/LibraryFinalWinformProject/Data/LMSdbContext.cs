@@ -10,7 +10,7 @@ namespace LibraryFinalWinformProject.Data
 {
     public class LMSdbContext:DbContext
     {
-        public LMSdbContext() : base("Server=DESKTOP-IH87BQ6;Database=LMS;Trusted_Connection=True;MultipleActiveResultSets=true") 
+        public LMSdbContext() : base(@"Server=CACER4\JUPITERSQLSERVER;Database=LMS;Trusted_Connection=True;MultipleActiveResultSets=true") 
         { 
         
         }

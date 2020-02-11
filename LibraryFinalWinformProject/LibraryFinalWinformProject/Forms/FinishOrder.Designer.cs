@@ -36,6 +36,7 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.txtBookSrc = new System.Windows.Forms.TextBox();
             this.Name = new System.Windows.Forms.Label();
@@ -46,7 +47,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtFoWhoCreated = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnFOCreate = new System.Windows.Forms.Button();
             this.txtFoOrderDate = new System.Windows.Forms.DateTimePicker();
             this.txtFoDeadline = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.gvBookSrc)).BeginInit();
@@ -62,10 +63,11 @@
             this.Column4,
             this.Column5,
             this.Column6,
-            this.Column7});
-            this.gvBookSrc.Location = new System.Drawing.Point(94, 45);
+            this.Column7,
+            this.Column8});
+            this.gvBookSrc.Location = new System.Drawing.Point(12, 41);
             this.gvBookSrc.Name = "gvBookSrc";
-            this.gvBookSrc.Size = new System.Drawing.Size(648, 150);
+            this.gvBookSrc.Size = new System.Drawing.Size(758, 150);
             this.gvBookSrc.TabIndex = 0;
             this.gvBookSrc.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvBookSrc_CellContentClick);
             // 
@@ -104,6 +106,11 @@
             // 
             this.Column7.HeaderText = "Availible Quantity";
             this.Column7.Name = "Column7";
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Add Book";
+            this.Column8.Name = "Column8";
             // 
             // label2
             // 
@@ -191,14 +198,15 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Deadline";
             // 
-            // button1
+            // btnFOCreate
             // 
-            this.button1.Location = new System.Drawing.Point(451, 256);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 53);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Create";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnFOCreate.Location = new System.Drawing.Point(451, 256);
+            this.btnFOCreate.Name = "btnFOCreate";
+            this.btnFOCreate.Size = new System.Drawing.Size(94, 53);
+            this.btnFOCreate.TabIndex = 6;
+            this.btnFOCreate.Text = "Create";
+            this.btnFOCreate.UseVisualStyleBackColor = true;
+            this.btnFOCreate.Click += new System.EventHandler(this.BtnFOCreate_Click);
             // 
             // txtFoOrderDate
             // 
@@ -222,7 +230,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.txtFoDeadline);
             this.Controls.Add(this.txtFoOrderDate);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnFOCreate);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtFoWhoCreated);
             this.Controls.Add(this.label4);
@@ -261,8 +269,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtFoWhoCreated;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnFOCreate;
         private System.Windows.Forms.DateTimePicker txtFoOrderDate;
         private System.Windows.Forms.DateTimePicker txtFoDeadline;
+        private System.Windows.Forms.DataGridViewButtonColumn Column8;
     }
 }
