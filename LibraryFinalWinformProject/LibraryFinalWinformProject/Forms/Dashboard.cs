@@ -14,6 +14,7 @@ namespace LibraryFinalWinformProject.Forms
     {
         private readonly Login _login;
         private readonly string _username;
+        
         public Dashboard( Login login,string username)
         {
 
@@ -68,6 +69,12 @@ namespace LibraryFinalWinformProject.Forms
         private void BtnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void menuDeadlineToday_Click(object sender, EventArgs e)
+        {
+            DeadlineTodayOrders DtForm = new DeadlineTodayOrders();
+            DtForm.Show();
         }
     }
 }

@@ -96,6 +96,7 @@ namespace LibraryFinalWinformProject.Forms
            
             _context.SaveChanges();
             MessageBox.Show("Sifaris ugurla yaradildi!!!");
+            gvBookSrc.Rows.Clear();
             
         }
     }

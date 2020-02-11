@@ -38,8 +38,8 @@
             this.bookListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.orToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuCreateAnOrder = new System.Windows.Forms.ToolStripMenuItem();
-            this.listOfOrdersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deadlineTodayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuListOfOrders = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuDeadlineToday = new System.Windows.Forms.ToolStripMenuItem();
             this.deadlineTomorrowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.overdueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.costumersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -123,7 +123,7 @@
             // 
             this.orToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuCreateAnOrder,
-            this.listOfOrdersToolStripMenuItem});
+            this.menuListOfOrders});
             this.orToolStripMenuItem.Name = "orToolStripMenuItem";
             this.orToolStripMenuItem.Size = new System.Drawing.Size(61, 21);
             this.orToolStripMenuItem.Text = "Orders";
@@ -131,25 +131,26 @@
             // menuCreateAnOrder
             // 
             this.menuCreateAnOrder.Name = "menuCreateAnOrder";
-            this.menuCreateAnOrder.Size = new System.Drawing.Size(171, 22);
+            this.menuCreateAnOrder.Size = new System.Drawing.Size(180, 22);
             this.menuCreateAnOrder.Text = "Create an Order";
             this.menuCreateAnOrder.Click += new System.EventHandler(this.menuCreateAnOrder_Click);
             // 
-            // listOfOrdersToolStripMenuItem
+            // menuListOfOrders
             // 
-            this.listOfOrdersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.deadlineTodayToolStripMenuItem,
+            this.menuListOfOrders.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuDeadlineToday,
             this.deadlineTomorrowToolStripMenuItem,
             this.overdueToolStripMenuItem});
-            this.listOfOrdersToolStripMenuItem.Name = "listOfOrdersToolStripMenuItem";
-            this.listOfOrdersToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
-            this.listOfOrdersToolStripMenuItem.Text = "List of Orders";
+            this.menuListOfOrders.Name = "menuListOfOrders";
+            this.menuListOfOrders.Size = new System.Drawing.Size(180, 22);
+            this.menuListOfOrders.Text = "List of Orders";
             // 
-            // deadlineTodayToolStripMenuItem
+            // menuDeadlineToday
             // 
-            this.deadlineTodayToolStripMenuItem.Name = "deadlineTodayToolStripMenuItem";
-            this.deadlineTodayToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
-            this.deadlineTodayToolStripMenuItem.Text = "Deadline Today";
+            this.menuDeadlineToday.Name = "menuDeadlineToday";
+            this.menuDeadlineToday.Size = new System.Drawing.Size(191, 22);
+            this.menuDeadlineToday.Text = "Deadline Today";
+            this.menuDeadlineToday.Click += new System.EventHandler(this.menuDeadlineToday_Click);
             // 
             // deadlineTomorrowToolStripMenuItem
             // 
@@ -189,7 +190,7 @@
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.White;
-            this.btnExit.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.Location = new System.Drawing.Point(730, 0);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(58, 25);
@@ -230,8 +231,8 @@
         private System.Windows.Forms.ToolStripMenuItem bookListToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem orToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem menuCreateAnOrder;
-        private System.Windows.Forms.ToolStripMenuItem listOfOrdersToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem deadlineTodayToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menuListOfOrders;
+        private System.Windows.Forms.ToolStripMenuItem menuDeadlineToday;
         private System.Windows.Forms.ToolStripMenuItem deadlineTomorrowToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem overdueToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem costumersToolStripMenuItem;
