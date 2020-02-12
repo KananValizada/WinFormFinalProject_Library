@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuReturnBook = new System.Windows.Forms.MenuStrip();
             this.booksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuAddBook = new System.Windows.Forms.ToolStripMenuItem();
             this.bookJanrasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,29 +40,31 @@
             this.menuCreateAnOrder = new System.Windows.Forms.ToolStripMenuItem();
             this.menuListOfOrders = new System.Windows.Forms.ToolStripMenuItem();
             this.menuDeadlineToday = new System.Windows.Forms.ToolStripMenuItem();
-            this.deadlineTomorrowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.overdueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuDeadlineTomorrow = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuOverdue = new System.Windows.Forms.ToolStripMenuItem();
             this.costumersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuAddNewCostumer = new System.Windows.Forms.ToolStripMenuItem();
             this.menuCostumerList = new System.Windows.Forms.ToolStripMenuItem();
             this.btnExit = new System.Windows.Forms.Button();
-            this.menuStrip1.SuspendLayout();
+            this.returnBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuReturnBook.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // menuReturnBook
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.White;
-            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuReturnBook.BackColor = System.Drawing.Color.White;
+            this.menuReturnBook.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuReturnBook.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.booksToolStripMenuItem,
             this.orToolStripMenuItem,
-            this.costumersToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 25);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.TabStop = true;
-            this.menuStrip1.Text = "menuStrip1";
+            this.costumersToolStripMenuItem,
+            this.returnBookToolStripMenuItem});
+            this.menuReturnBook.Location = new System.Drawing.Point(0, 0);
+            this.menuReturnBook.Name = "menuReturnBook";
+            this.menuReturnBook.Size = new System.Drawing.Size(800, 25);
+            this.menuReturnBook.TabIndex = 0;
+            this.menuReturnBook.TabStop = true;
+            this.menuReturnBook.Text = "menuStrip1";
             // 
             // booksToolStripMenuItem
             // 
@@ -139,8 +141,8 @@
             // 
             this.menuListOfOrders.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuDeadlineToday,
-            this.deadlineTomorrowToolStripMenuItem,
-            this.overdueToolStripMenuItem});
+            this.menuDeadlineTomorrow,
+            this.menuOverdue});
             this.menuListOfOrders.Name = "menuListOfOrders";
             this.menuListOfOrders.Size = new System.Drawing.Size(180, 22);
             this.menuListOfOrders.Text = "List of Orders";
@@ -152,17 +154,19 @@
             this.menuDeadlineToday.Text = "Deadline Today";
             this.menuDeadlineToday.Click += new System.EventHandler(this.menuDeadlineToday_Click);
             // 
-            // deadlineTomorrowToolStripMenuItem
+            // menuDeadlineTomorrow
             // 
-            this.deadlineTomorrowToolStripMenuItem.Name = "deadlineTomorrowToolStripMenuItem";
-            this.deadlineTomorrowToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
-            this.deadlineTomorrowToolStripMenuItem.Text = "Deadline Tomorrow";
+            this.menuDeadlineTomorrow.Name = "menuDeadlineTomorrow";
+            this.menuDeadlineTomorrow.Size = new System.Drawing.Size(191, 22);
+            this.menuDeadlineTomorrow.Text = "Deadline Tomorrow";
+            this.menuDeadlineTomorrow.Click += new System.EventHandler(this.menuDeadlineTomorrow_Click);
             // 
-            // overdueToolStripMenuItem
+            // menuOverdue
             // 
-            this.overdueToolStripMenuItem.Name = "overdueToolStripMenuItem";
-            this.overdueToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
-            this.overdueToolStripMenuItem.Text = "Overdue";
+            this.menuOverdue.Name = "menuOverdue";
+            this.menuOverdue.Size = new System.Drawing.Size(191, 22);
+            this.menuOverdue.Text = "Overdue";
+            this.menuOverdue.Click += new System.EventHandler(this.menuOverdue_Click);
             // 
             // costumersToolStripMenuItem
             // 
@@ -199,6 +203,13 @@
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
+            // returnBookToolStripMenuItem
+            // 
+            this.returnBookToolStripMenuItem.Name = "returnBookToolStripMenuItem";
+            this.returnBookToolStripMenuItem.Size = new System.Drawing.Size(91, 21);
+            this.returnBookToolStripMenuItem.Text = "Return Book";
+            this.returnBookToolStripMenuItem.Click += new System.EventHandler(this.returnBookToolStripMenuItem_Click);
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -207,13 +218,13 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.menuReturnBook);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MainMenuStrip = this.menuStrip1;
+            this.MainMenuStrip = this.menuReturnBook;
             this.Name = "Dashboard";
             this.Text = "Dashboard";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.menuReturnBook.ResumeLayout(false);
+            this.menuReturnBook.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,7 +232,7 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip menuReturnBook;
         private System.Windows.Forms.ToolStripMenuItem booksToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem MenuAddBook;
         private System.Windows.Forms.ToolStripMenuItem bookJanrasToolStripMenuItem;
@@ -233,11 +244,12 @@
         private System.Windows.Forms.ToolStripMenuItem menuCreateAnOrder;
         private System.Windows.Forms.ToolStripMenuItem menuListOfOrders;
         private System.Windows.Forms.ToolStripMenuItem menuDeadlineToday;
-        private System.Windows.Forms.ToolStripMenuItem deadlineTomorrowToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem overdueToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menuDeadlineTomorrow;
+        private System.Windows.Forms.ToolStripMenuItem menuOverdue;
         private System.Windows.Forms.ToolStripMenuItem costumersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem menuAddNewCostumer;
         private System.Windows.Forms.ToolStripMenuItem menuCostumerList;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.ToolStripMenuItem returnBookToolStripMenuItem;
     }
 }

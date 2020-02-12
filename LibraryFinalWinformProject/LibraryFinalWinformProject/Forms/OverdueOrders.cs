@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LibraryFinalWinformProject.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,35 +8,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using LibraryFinalWinformProject.Data;
-
 
 namespace LibraryFinalWinformProject.Forms
 {
-    
-    public partial class DeadlineTodayOrders : Form
+    public partial class OverdueOrders : Form
     {
         private readonly LMSdbContext _context;
-        public DeadlineTodayOrders()
+        public OverdueOrders()
         {
             _context = new LMSdbContext();
             InitializeComponent();
-            FillGrToday();
+            FillGrOverdue();
         }
-
-        public void FillGrToday()
+        public void FillGrOverdue()
         {
             DateTime today = DateTime.Today;
-          
+
             var todayOrders = _context.Orders.Include("Person")
                 .Include("Book")
-                .Where(u => u.Deadline.Year == today.Year
-                        && u.Deadline.Month == today.Month
-                        && u.Deadline.Day == today.Day);
-            foreach(var i in todayOrders)
+                .Where(u => u.Deadline<today);
+            foreach (var i in todayOrders)
             {
-                dgvTodayOrders.Rows.Add(i.Person.Id,
-                    i.Person.Name, i.Person.Surname,i.Book.Name,i.Person.BooksHave);
+                dgvOverdueOrders.Rows.Add(i.Person.Id,
+                    i.Person.Name, i.Person.Surname, i.Book.Name, i.Person.BooksHave);
             }
         }
     }

@@ -76,5 +76,23 @@ namespace LibraryFinalWinformProject.Forms
             DeadlineTodayOrders DtForm = new DeadlineTodayOrders();
             DtForm.Show();
         }
+
+        private void menuDeadlineTomorrow_Click(object sender, EventArgs e)
+        {
+            DeadlineTomorrow DTForm = new DeadlineTomorrow();
+            DTForm.Show();
+        }
+
+        private void menuOverdue_Click(object sender, EventArgs e)
+        {
+            OverdueOrders OdForm = new OverdueOrders();
+            OdForm.Show();
+        }
+
+        private void returnBookToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BookReturn BrForm = new BookReturn();
+            BrForm.Show();
+        }
     }
 }

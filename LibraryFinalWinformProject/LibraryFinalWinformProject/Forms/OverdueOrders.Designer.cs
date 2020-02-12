@@ -1,6 +1,6 @@
 ﻿namespace LibraryFinalWinformProject.Forms
 {
-    partial class DeadlineTodayOrders
+    partial class OverdueOrders
     {
         /// <summary>
         /// Required designer variable.
@@ -28,28 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvTodayOrders = new System.Windows.Forms.DataGridView();
+            this.dgvOverdueOrders = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTodayOrders)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOverdueOrders)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgvTodayOrders
+            // dgvOverdueOrders
             // 
-            this.dgvTodayOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTodayOrders.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvOverdueOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOverdueOrders.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
             this.Column4,
             this.Column7});
-            this.dgvTodayOrders.Location = new System.Drawing.Point(12, 43);
-            this.dgvTodayOrders.Name = "dgvTodayOrders";
-            this.dgvTodayOrders.Size = new System.Drawing.Size(448, 150);
-            this.dgvTodayOrders.TabIndex = 0;
+            this.dgvOverdueOrders.Location = new System.Drawing.Point(17, 85);
+            this.dgvOverdueOrders.Name = "dgvOverdueOrders";
+            this.dgvOverdueOrders.Size = new System.Drawing.Size(445, 150);
+            this.dgvOverdueOrders.TabIndex = 2;
             // 
             // Column1
             // 
@@ -77,22 +77,22 @@
             this.Column7.HeaderText = "Books Have";
             this.Column7.Name = "Column7";
             // 
-            // DeadlineTodayOrders
+            // OverdueOrders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(518, 334);
-            this.Controls.Add(this.dgvTodayOrders);
-            this.Name = "DeadlineTodayOrders";
-            this.Text = "DeadlineTodayOrders";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTodayOrders)).EndInit();
+            this.ClientSize = new System.Drawing.Size(479, 321);
+            this.Controls.Add(this.dgvOverdueOrders);
+            this.Name = "OverdueOrders";
+            this.Text = "OverdueOrders";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOverdueOrders)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvTodayOrders;
+        private System.Windows.Forms.DataGridView dgvOverdueOrders;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;

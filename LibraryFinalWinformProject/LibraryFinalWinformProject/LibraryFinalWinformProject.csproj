@@ -87,6 +87,12 @@
     <Compile Include="Forms\BookList.Designer.cs">
       <DependentUpon>BookList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\BookReturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BookReturn.Designer.cs">
+      <DependentUpon>BookReturn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\CostumerList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,12 @@
     <Compile Include="Forms\DeadlineTodayOrders.Designer.cs">
       <DependentUpon>DeadlineTodayOrders.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\DeadlineTomorrow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DeadlineTomorrow.Designer.cs">
+      <DependentUpon>DeadlineTomorrow.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FinishOrder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +134,12 @@
     </Compile>
     <Compile Include="Forms\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OverdueOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OverdueOrders.Designer.cs">
+      <DependentUpon>OverdueOrders.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202002111935182_Home.cs" />
     <Compile Include="Migrations\202002111935182_Home.designer.cs">
@@ -157,6 +175,9 @@
     <EmbeddedResource Include="Forms\BookList.resx">
       <DependentUpon>BookList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BookReturn.resx">
+      <DependentUpon>BookReturn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\CostumerList.resx">
       <DependentUpon>CostumerList.cs</DependentUpon>
     </EmbeddedResource>
@@ -169,11 +190,17 @@
     <EmbeddedResource Include="Forms\DeadlineTodayOrders.resx">
       <DependentUpon>DeadlineTodayOrders.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DeadlineTomorrow.resx">
+      <DependentUpon>DeadlineTomorrow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FinishOrder.resx">
       <DependentUpon>FinishOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OverdueOrders.resx">
+      <DependentUpon>OverdueOrders.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202002111935182_Home.resx">
       <DependentUpon>202002111935182_Home.cs</DependentUpon>
