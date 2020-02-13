@@ -55,42 +55,6 @@ namespace LibraryFinalWinformProject
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            try
-            {
-              frm2.Show();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Siz artiq qeydiyyatdan kecmisiniz");
-            }
-            
-            timer1.Start();
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            frm2.Left += 10;
-            if(frm2.Left >= 830)
-            {
-                timer1.Stop();
-                this.TopMost = false;
-                frm2.TopMost = true;
-                timer2.Start();
-            }
-        }
-
-        private void timer2_Tick(object sender, EventArgs e)
-        {
-            frm2.Left -= 10;
-            if (frm2.Left <= 620)
-            {
-                
-                timer2.Stop();
-            }
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtLgnUserName.Text) )
@@ -108,13 +72,19 @@ namespace LibraryFinalWinformProject
 
             if (user!=null)
             {
-                Dashboard dashboard = new Dashboard(this,txtLgnUserName.Text);
-                dashboard.Show();
-               
-
-               
+                if(user.Level == userLevel.Moderator)
+                {
+                    Dashboard dashboard = new Dashboard(this,txtLgnUserName.Text);
+                         dashboard.Show();
+                }
+                else
+                {
+                    AdminPanel admin = new AdminPanel(this);
+                    admin.Show();
+                }
                 return;
             }
+            
 
             MessageBox.Show("E-poct ve ya Sifre yalnisdir");
         }

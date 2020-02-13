@@ -28,19 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.txtLgnUserName = new System.Windows.Forms.TextBox();
             this.pnlLoginName = new System.Windows.Forms.Panel();
             this.txtLgnPassword = new System.Windows.Forms.TextBox();
             this.pnlLoginPassword = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.IconPassword = new System.Windows.Forms.PictureBox();
             this.IconName = new System.Windows.Forms.PictureBox();
             this.IconPlane = new System.Windows.Forms.PictureBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.IconPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IconName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IconPlane)).BeginInit();
@@ -98,27 +94,13 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.button1.Location = new System.Drawing.Point(35, 322);
+            this.button1.Location = new System.Drawing.Point(35, 339);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(292, 36);
             this.button1.TabIndex = 4;
             this.button1.Text = "Sign In";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(35, 384);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(292, 36);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Register";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // IconPassword
             // 
@@ -155,23 +137,12 @@
             this.IconPlane.TabIndex = 0;
             this.IconPlane.TabStop = false;
             // 
-            // timer1
-            // 
-            this.timer1.Interval = 15;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // timer2
-            // 
-            this.timer2.Interval = 15;
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
-            // Form1
+            // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.ClientSize = new System.Drawing.Size(359, 472);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pnlLoginPassword);
             this.Controls.Add(this.pnlLoginName);
@@ -183,7 +154,7 @@
             this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "Form1";
+            this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.IconPassword)).EndInit();
@@ -204,9 +175,6 @@
         private System.Windows.Forms.TextBox txtLgnPassword;
         private System.Windows.Forms.Panel pnlLoginPassword;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Timer timer2;
     }
 }
 

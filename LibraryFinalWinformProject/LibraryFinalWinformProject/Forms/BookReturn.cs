@@ -1,4 +1,5 @@
 ﻿using LibraryFinalWinformProject.Data;
+using LibraryFinalWinformProject.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -39,8 +40,8 @@ namespace LibraryFinalWinformProject.Forms
                 {
                     dfrnce = (now - i.Deadline).TotalDays;
                     for (var a = 0; a < dfrnce; a++)
-                    {
-                        totalprise = totalprise + (Convert.ToDouble(i.Book.Prise) * 0.5 / 100);
+                    {     
+                        i.overdueDebt= Convert.ToDecimal(i.Book.Prise)-Convert.ToDecimal(totalprise + (Convert.ToDouble(i.Book.Prise) * 0.5 / 100));
                     }
                 }
 
@@ -50,7 +51,22 @@ namespace LibraryFinalWinformProject.Forms
                     i.Book.Name,
                     i.Deadline,
                     i.Book.Prise,
-                    totalprise);
+                    i.overdueDebt);
+            }
+        }
+
+        private void DgvRtrn_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.ColumnIndex == 7 && !(dgvRtrn.Rows[e.RowIndex].Cells[6].Value is null))
+            {
+                string row = dgvRtrn.Rows[e.RowIndex].Cells[4].Value.ToString();
+                MessageBox.Show(dgvRtrn.Rows[e.RowIndex].Cells[6].Value.ToString());
+                Order returnedOrder = _context.Orders.Include("Book").Include("Person").FirstOrDefault(u => u.Deadline.ToString() == row);
+                returnedOrder.Person.BooksHave--;
+                returnedOrder.Book.AvaliableQuantity++;
+                _context.Orders.Remove(returnedOrder);
+                _context.SaveChanges();
+                MessageBox.Show("Kitab Qaytarildi");
             }
         }
     }

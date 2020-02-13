@@ -31,6 +31,7 @@
             this.txtSearchCostumerName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvRtrn = new System.Windows.Forms.DataGridView();
+            this.btnrtnSrc = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,7 +40,6 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnrtnSrc = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRtrn)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,6 +75,17 @@
             this.dgvRtrn.Name = "dgvRtrn";
             this.dgvRtrn.Size = new System.Drawing.Size(710, 150);
             this.dgvRtrn.TabIndex = 2;
+            this.dgvRtrn.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvRtrn_CellContentClick);
+            // 
+            // btnrtnSrc
+            // 
+            this.btnrtnSrc.Location = new System.Drawing.Point(373, 44);
+            this.btnrtnSrc.Name = "btnrtnSrc";
+            this.btnrtnSrc.Size = new System.Drawing.Size(75, 23);
+            this.btnrtnSrc.TabIndex = 3;
+            this.btnrtnSrc.Text = "Search";
+            this.btnrtnSrc.UseVisualStyleBackColor = true;
+            this.btnrtnSrc.Click += new System.EventHandler(this.btnrtnSrc_Click);
             // 
             // Column1
             // 
@@ -109,23 +120,13 @@
             // 
             // Column7
             // 
-            this.Column7.HeaderText = "Total Prise";
+            this.Column7.HeaderText = "Extra Dept";
             this.Column7.Name = "Column7";
             // 
             // Column8
             // 
             this.Column8.HeaderText = "Return";
             this.Column8.Name = "Column8";
-            // 
-            // btnrtnSrc
-            // 
-            this.btnrtnSrc.Location = new System.Drawing.Point(373, 44);
-            this.btnrtnSrc.Name = "btnrtnSrc";
-            this.btnrtnSrc.Size = new System.Drawing.Size(75, 23);
-            this.btnrtnSrc.TabIndex = 3;
-            this.btnrtnSrc.Text = "Search";
-            this.btnrtnSrc.UseVisualStyleBackColor = true;
-            this.btnrtnSrc.Click += new System.EventHandler(this.btnrtnSrc_Click);
             // 
             // BookReturn
             // 
@@ -149,6 +150,7 @@
         private System.Windows.Forms.TextBox txtSearchCostumerName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvRtrn;
+        private System.Windows.Forms.Button btnrtnSrc;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -157,6 +159,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewButtonColumn Column8;
-        private System.Windows.Forms.Button btnrtnSrc;
     }
 }
