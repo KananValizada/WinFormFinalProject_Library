@@ -119,6 +119,7 @@
             this.cmbAuthorBook.Name = "cmbAuthorBook";
             this.cmbAuthorBook.Size = new System.Drawing.Size(163, 21);
             this.cmbAuthorBook.TabIndex = 2;
+            this.cmbAuthorBook.KeyUp += new System.Windows.Forms.KeyEventHandler(this.CmbAuthorBook_KeyUp);
             // 
             // cmbJanraBook
             // 
@@ -127,6 +128,7 @@
             this.cmbJanraBook.Name = "cmbJanraBook";
             this.cmbJanraBook.Size = new System.Drawing.Size(163, 21);
             this.cmbJanraBook.TabIndex = 2;
+            this.cmbJanraBook.KeyUp += new System.Windows.Forms.KeyEventHandler(this.CmbJanraBook_KeyUp);
             // 
             // dtpDateBook
             // 

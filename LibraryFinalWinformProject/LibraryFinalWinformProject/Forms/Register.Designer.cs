@@ -45,6 +45,10 @@
             this.IconPassword = new System.Windows.Forms.PictureBox();
             this.FlnIcon = new System.Windows.Forms.PictureBox();
             this.IconName = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.IconPlane)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IconMail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IconPassword)).BeginInit();
@@ -55,7 +59,7 @@
             // pnlLoginPassword
             // 
             this.pnlLoginPassword.BackColor = System.Drawing.Color.White;
-            this.pnlLoginPassword.Location = new System.Drawing.Point(33, 341);
+            this.pnlLoginPassword.Location = new System.Drawing.Point(33, 351);
             this.pnlLoginPassword.Name = "pnlLoginPassword";
             this.pnlLoginPassword.Size = new System.Drawing.Size(292, 1);
             this.pnlLoginPassword.TabIndex = 8;
@@ -63,7 +67,7 @@
             // pnlLoginName
             // 
             this.pnlLoginName.BackColor = System.Drawing.Color.White;
-            this.pnlLoginName.Location = new System.Drawing.Point(33, 228);
+            this.pnlLoginName.Location = new System.Drawing.Point(33, 219);
             this.pnlLoginName.Name = "pnlLoginName";
             this.pnlLoginName.Size = new System.Drawing.Size(292, 1);
             this.pnlLoginName.TabIndex = 9;
@@ -74,12 +78,11 @@
             this.txtLgnPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtLgnPassword.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLgnPassword.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.txtLgnPassword.Location = new System.Drawing.Point(75, 312);
+            this.txtLgnPassword.Location = new System.Drawing.Point(75, 322);
             this.txtLgnPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtLgnPassword.Name = "txtLgnPassword";
             this.txtLgnPassword.Size = new System.Drawing.Size(224, 18);
             this.txtLgnPassword.TabIndex = 6;
-            this.txtLgnPassword.Text = "Password";
             this.txtLgnPassword.Click += new System.EventHandler(this.txtLgnPassword_Click);
             // 
             // txtRgsUserName
@@ -88,12 +91,11 @@
             this.txtRgsUserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtRgsUserName.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRgsUserName.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.txtRgsUserName.Location = new System.Drawing.Point(75, 198);
+            this.txtRgsUserName.Location = new System.Drawing.Point(75, 189);
             this.txtRgsUserName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtRgsUserName.Name = "txtRgsUserName";
             this.txtRgsUserName.Size = new System.Drawing.Size(224, 18);
             this.txtRgsUserName.TabIndex = 7;
-            this.txtRgsUserName.Text = "Username";
             this.txtRgsUserName.Click += new System.EventHandler(this.txtLgnUserName_Click);
             // 
             // btnRgsRegister
@@ -116,18 +118,17 @@
             this.txtFullNam.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtFullNam.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFullNam.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.txtFullNam.Location = new System.Drawing.Point(75, 136);
+            this.txtFullNam.Location = new System.Drawing.Point(75, 123);
             this.txtFullNam.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFullNam.Name = "txtFullNam";
             this.txtFullNam.Size = new System.Drawing.Size(224, 18);
             this.txtFullNam.TabIndex = 7;
-            this.txtFullNam.Text = "Full Name";
             this.txtFullNam.Click += new System.EventHandler(this.FullNamClick);
             // 
             // plnFln
             // 
             this.plnFln.BackColor = System.Drawing.Color.White;
-            this.plnFln.Location = new System.Drawing.Point(33, 166);
+            this.plnFln.Location = new System.Drawing.Point(33, 153);
             this.plnFln.Name = "plnFln";
             this.plnFln.Size = new System.Drawing.Size(292, 1);
             this.plnFln.TabIndex = 9;
@@ -138,18 +139,17 @@
             this.txtMail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMail.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMail.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.txtMail.Location = new System.Drawing.Point(75, 258);
+            this.txtMail.Location = new System.Drawing.Point(73, 254);
             this.txtMail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMail.Name = "txtMail";
             this.txtMail.Size = new System.Drawing.Size(224, 18);
             this.txtMail.TabIndex = 6;
-            this.txtMail.Text = "Email";
             this.txtMail.Click += new System.EventHandler(this.txtMailClick);
             // 
             // pnlMail
             // 
             this.pnlMail.BackColor = System.Drawing.Color.White;
-            this.pnlMail.Location = new System.Drawing.Point(33, 287);
+            this.pnlMail.Location = new System.Drawing.Point(31, 283);
             this.pnlMail.Name = "pnlMail";
             this.pnlMail.Size = new System.Drawing.Size(292, 1);
             this.pnlMail.TabIndex = 8;
@@ -161,18 +161,19 @@
             this.cmbStatus.Items.AddRange(new object[] {
             "Admin",
             "Moderator"});
-            this.cmbStatus.Location = new System.Drawing.Point(116, 365);
+            this.cmbStatus.Location = new System.Drawing.Point(116, 374);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(209, 21);
             this.cmbStatus.TabIndex = 12;
             this.cmbStatus.Text = "Admin";
+            this.cmbStatus.KeyUp += new System.Windows.Forms.KeyEventHandler(this.CmbStatus_KeyUp);
             // 
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
             this.lblStatus.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStatus.ForeColor = System.Drawing.Color.White;
-            this.lblStatus.Location = new System.Drawing.Point(30, 368);
+            this.lblStatus.Location = new System.Drawing.Point(30, 377);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(48, 18);
             this.lblStatus.TabIndex = 13;
@@ -181,7 +182,7 @@
             // IconPlane
             // 
             this.IconPlane.Image = ((System.Drawing.Image)(resources.GetObject("IconPlane.Image")));
-            this.IconPlane.Location = new System.Drawing.Point(142, 25);
+            this.IconPlane.Location = new System.Drawing.Point(138, 13);
             this.IconPlane.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.IconPlane.Name = "IconPlane";
             this.IconPlane.Size = new System.Drawing.Size(75, 79);
@@ -193,7 +194,7 @@
             // 
             this.IconMail.BackgroundImage = global::LibraryFinalWinformProject.Properties.Resources.makefgsadsada;
             this.IconMail.Image = global::LibraryFinalWinformProject.Properties.Resources.whitLtr;
-            this.IconMail.Location = new System.Drawing.Point(33, 251);
+            this.IconMail.Location = new System.Drawing.Point(31, 247);
             this.IconMail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.IconMail.Name = "IconMail";
             this.IconMail.Size = new System.Drawing.Size(27, 27);
@@ -205,7 +206,7 @@
             // 
             this.IconPassword.BackgroundImage = global::LibraryFinalWinformProject.Properties.Resources.makefgsadsada;
             this.IconPassword.Image = global::LibraryFinalWinformProject.Properties.Resources.makefg;
-            this.IconPassword.Location = new System.Drawing.Point(33, 305);
+            this.IconPassword.Location = new System.Drawing.Point(33, 315);
             this.IconPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.IconPassword.Name = "IconPassword";
             this.IconPassword.Size = new System.Drawing.Size(27, 27);
@@ -217,7 +218,7 @@
             // 
             this.FlnIcon.BackgroundImage = global::LibraryFinalWinformProject.Properties.Resources.makefgsadsada;
             this.FlnIcon.Image = global::LibraryFinalWinformProject.Properties.Resources.man1;
-            this.FlnIcon.Location = new System.Drawing.Point(33, 130);
+            this.FlnIcon.Location = new System.Drawing.Point(33, 117);
             this.FlnIcon.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.FlnIcon.Name = "FlnIcon";
             this.FlnIcon.Size = new System.Drawing.Size(27, 27);
@@ -229,7 +230,7 @@
             // 
             this.IconName.BackgroundImage = global::LibraryFinalWinformProject.Properties.Resources.makefgsadsada;
             this.IconName.Image = global::LibraryFinalWinformProject.Properties.Resources.man1;
-            this.IconName.Location = new System.Drawing.Point(33, 192);
+            this.IconName.Location = new System.Drawing.Point(33, 183);
             this.IconName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.IconName.Name = "IconName";
             this.IconName.Size = new System.Drawing.Size(27, 27);
@@ -237,12 +238,60 @@
             this.IconName.TabIndex = 5;
             this.IconName.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(143, 97);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(67, 20);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Full Name";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(142, 163);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(67, 20);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Username";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(154, 228);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(41, 20);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Email";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(143, 297);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(63, 20);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Password";
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.ClientSize = new System.Drawing.Size(359, 479);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.cmbStatus);
             this.Controls.Add(this.btnRgsRegister);
@@ -290,5 +339,9 @@
         private System.Windows.Forms.Panel pnlMail;
         private System.Windows.Forms.Label lblStatus;
         public System.Windows.Forms.ComboBox cmbStatus;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

@@ -45,8 +45,9 @@
             this.costumersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuAddNewCostumer = new System.Windows.Forms.ToolStripMenuItem();
             this.menuCostumerList = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnExit = new System.Windows.Forms.Button();
             this.returnBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.lblUserName = new System.Windows.Forms.Label();
             this.menuReturnBook.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,7 +81,7 @@
             // MenuAddBook
             // 
             this.MenuAddBook.Name = "MenuAddBook";
-            this.MenuAddBook.Size = new System.Drawing.Size(150, 22);
+            this.MenuAddBook.Size = new System.Drawing.Size(180, 22);
             this.MenuAddBook.Text = "Add Book";
             this.MenuAddBook.Click += new System.EventHandler(this.MenuAddBook_Click);
             // 
@@ -89,7 +90,7 @@
             this.bookJanrasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuAddJanra});
             this.bookJanrasToolStripMenuItem.Name = "bookJanrasToolStripMenuItem";
-            this.bookJanrasToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.bookJanrasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.bookJanrasToolStripMenuItem.Text = "BookJanras";
             // 
             // menuAddJanra
@@ -104,7 +105,7 @@
             this.bookAuthorsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuAddAuthor});
             this.bookAuthorsToolStripMenuItem.Name = "bookAuthorsToolStripMenuItem";
-            this.bookAuthorsToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.bookAuthorsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.bookAuthorsToolStripMenuItem.Text = "BookAuthors";
             // 
             // menuAddAuthor
@@ -117,7 +118,7 @@
             // bookListToolStripMenuItem
             // 
             this.bookListToolStripMenuItem.Name = "bookListToolStripMenuItem";
-            this.bookListToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.bookListToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.bookListToolStripMenuItem.Text = "BookList";
             this.bookListToolStripMenuItem.Click += new System.EventHandler(this.bookListToolStripMenuItem_Click);
             // 
@@ -191,6 +192,13 @@
             this.menuCostumerList.Text = "Costumer List";
             this.menuCostumerList.Click += new System.EventHandler(this.menuCostumerList_Click);
             // 
+            // returnBookToolStripMenuItem
+            // 
+            this.returnBookToolStripMenuItem.Name = "returnBookToolStripMenuItem";
+            this.returnBookToolStripMenuItem.Size = new System.Drawing.Size(91, 21);
+            this.returnBookToolStripMenuItem.Text = "Return Book";
+            this.returnBookToolStripMenuItem.Click += new System.EventHandler(this.returnBookToolStripMenuItem_Click);
+            // 
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.White;
@@ -203,12 +211,17 @@
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
-            // returnBookToolStripMenuItem
+            // lblUserName
             // 
-            this.returnBookToolStripMenuItem.Name = "returnBookToolStripMenuItem";
-            this.returnBookToolStripMenuItem.Size = new System.Drawing.Size(91, 21);
-            this.returnBookToolStripMenuItem.Text = "Return Book";
-            this.returnBookToolStripMenuItem.Click += new System.EventHandler(this.returnBookToolStripMenuItem_Click);
+            this.lblUserName.AutoSize = true;
+            this.lblUserName.BackColor = System.Drawing.Color.Transparent;
+            this.lblUserName.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserName.ForeColor = System.Drawing.Color.White;
+            this.lblUserName.Location = new System.Drawing.Point(570, 3);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(50, 18);
+            this.lblUserName.TabIndex = 2;
+            this.lblUserName.Text = "label1";
             // 
             // Dashboard
             // 
@@ -217,11 +230,13 @@
             this.BackgroundImage = global::LibraryFinalWinformProject.Properties.Resources._888655_download_free_library_background_images_1920x1200;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblUserName);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.menuReturnBook);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuReturnBook;
             this.Name = "Dashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
             this.menuReturnBook.ResumeLayout(false);
             this.menuReturnBook.PerformLayout();
@@ -251,5 +266,6 @@
         private System.Windows.Forms.ToolStripMenuItem menuCostumerList;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.ToolStripMenuItem returnBookToolStripMenuItem;
+        private System.Windows.Forms.Label lblUserName;
     }
 }

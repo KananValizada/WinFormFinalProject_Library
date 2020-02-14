@@ -22,6 +22,7 @@ namespace LibraryFinalWinformProject.Forms
             _login = login;
             _login.Hide();
             _username = username;
+            lblUserName.Text = "Welcome! " + username;
         }
 
         private void MenuAddBook_Click(object sender, EventArgs e)

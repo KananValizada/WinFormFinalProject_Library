@@ -153,9 +153,9 @@
     <Compile Include="Forms\Reports.Designer.cs">
       <DependentUpon>Reports.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202002131433289_ClassRoom.cs" />
-    <Compile Include="Migrations\202002131433289_ClassRoom.designer.cs">
-      <DependentUpon>202002131433289_ClassRoom.cs</DependentUpon>
+    <Compile Include="Migrations\202002141532500_Classroom.cs" />
+    <Compile Include="Migrations\202002141532500_Classroom.designer.cs">
+      <DependentUpon>202002141532500_Classroom.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Book.cs" />
@@ -220,8 +220,8 @@
     <EmbeddedResource Include="Forms\Reports.resx">
       <DependentUpon>Reports.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202002131433289_ClassRoom.resx">
-      <DependentUpon>202002131433289_ClassRoom.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202002141532500_Classroom.resx">
+      <DependentUpon>202002141532500_Classroom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -290,7 +290,7 @@
     <COMReference Include="Microsoft.Office.Core">
       <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
       <VersionMajor>2</VersionMajor>
-      <VersionMinor>8</VersionMinor>
+      <VersionMinor>5</VersionMinor>
       <Lcid>0</Lcid>
       <WrapperTool>primary</WrapperTool>
       <Isolated>False</Isolated>
@@ -299,7 +299,7 @@
     <COMReference Include="Microsoft.Office.Interop.Excel">
       <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
       <VersionMajor>1</VersionMajor>
-      <VersionMinor>9</VersionMinor>
+      <VersionMinor>7</VersionMinor>
       <Lcid>0</Lcid>
       <WrapperTool>primary</WrapperTool>
       <Isolated>False</Isolated>

@@ -41,6 +41,13 @@ namespace LibraryFinalWinformProject.Forms
 
         private void BtnExport_Click(object sender, EventArgs e)
         {
+           if(dgvReports.Rows.Count < 2)
+            {
+                 MessageBox.Show("Cedvelde melumat yoxdur");
+                return;
+            }
+                
+            
             Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
             Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
             Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
@@ -49,15 +56,24 @@ namespace LibraryFinalWinformProject.Forms
             worksheet.Name = "OrderList";
             for(int i = 1; i < dgvReports.Columns.Count + 1; i++)
             {
-                worksheet.Cells[i, 1] = dgvReports.Columns[i - 1].HeaderText;
+                worksheet.Cells[1,i] = dgvReports.Columns[i - 1].HeaderText;
             }
-            for (int i = 0; i < dgvReports.Rows.Count; i++)
+            for (int i = 0; i < dgvReports.Rows.Count-1; i++)
             {
                 for(int j = 0; j < dgvReports.Columns.Count; j++)
                 {
                     worksheet.Cells[i + 2, j + 1] = dgvReports.Rows[i].Cells[j].Value.ToString();
                 }
             }
+
+            var saveFileDialogue = new SaveFileDialog();
+            saveFileDialogue.FileName = "output";
+            saveFileDialogue.DefaultExt = "xlsx";
+            if (saveFileDialogue.ShowDialog() == DialogResult.OK)
+            {
+                workbook.SaveAs(saveFileDialogue.FileName, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
+            }
+            app.Quit();
         }
     }
 }

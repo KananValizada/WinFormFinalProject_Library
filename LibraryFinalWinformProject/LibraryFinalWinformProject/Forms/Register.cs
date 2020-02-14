@@ -132,5 +132,10 @@ namespace LibraryFinalWinformProject
             this.Close();
           
         }
+
+        private void CmbStatus_KeyUp(object sender, KeyEventArgs e)
+        {
+            cmbStatus.Text = "";
+        }
     }
 }

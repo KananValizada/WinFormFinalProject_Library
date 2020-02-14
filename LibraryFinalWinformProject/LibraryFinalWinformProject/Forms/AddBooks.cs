@@ -43,14 +43,9 @@ namespace LibraryFinalWinformProject.Forms
                 MessageBox.Show("Kitab adi daxil edin");
                 return;
             }
-            if (txtPriceBook.Text=="0")
+            if (string.IsNullOrEmpty(cmbAuthorBook.Text))
             {
-                MessageBox.Show("Kitab Qiymetini daxil edin");
-                return;
-            }
-            if(txtQuantityBook.Text=="0")
-            {
-                MessageBox.Show("Kitab sayi daxil edin");
+                MessageBox.Show("Yazici secin");
                 return;
             }
             if (string.IsNullOrEmpty(cmbJanraBook.Text))
@@ -58,14 +53,19 @@ namespace LibraryFinalWinformProject.Forms
                 MessageBox.Show("Janr secin");
                 return;
             }
-            if (string.IsNullOrEmpty(cmbAuthorBook.Text))
-            {
-                MessageBox.Show("Yazici secin");
-                return;
-            }
             if (string.IsNullOrEmpty(dtpDateBook.Text))
             {
                 MessageBox.Show("Tarix secin");
+                return;
+            }
+            if (txtPriceBook.Text == "0")
+            {
+                MessageBox.Show("Kitab Qiymetini daxil edin");
+                return;
+            }
+            if (txtQuantityBook.Text == "0")
+            {
+                MessageBox.Show("Kitab sayi daxil edin");
                 return;
             }
             BookJanra janraid = _context.BookJanras.FirstOrDefault(u=>u.Name == cmbJanraBook.Text);
@@ -84,6 +84,16 @@ namespace LibraryFinalWinformProject.Forms
             _context.SaveChanges();
             MessageBox.Show("Kitab Elave olundu");
 
+        }
+
+        private void CmbAuthorBook_KeyUp(object sender, KeyEventArgs e)
+        {
+            cmbAuthorBook.Text = "";
+        }
+
+        private void CmbJanraBook_KeyUp(object sender, KeyEventArgs e)
+        {
+            cmbJanraBook.Text = "";
         }
     }
 }
