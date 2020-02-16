@@ -12,6 +12,8 @@ namespace LibraryFinalWinformProject.Models
     {
         public int Id { get; set; }
         [Required]
+        public Boolean Status { get; set; }
+        [Required]
         [ForeignKey("Person")]
         public int PersonId { get; set; }
         [Required]

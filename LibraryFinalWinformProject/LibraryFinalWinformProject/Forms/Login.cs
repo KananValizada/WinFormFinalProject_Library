@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LibraryFinalWinformProject.Classes;
 using LibraryFinalWinformProject.Data;
 using LibraryFinalWinformProject.Forms;
 using LibraryFinalWinformProject.Models;
@@ -67,14 +68,14 @@ namespace LibraryFinalWinformProject
                 MessageBox.Show("Sifre daxil edin");
                 return;
             }
-
-            User user = _context.Users.FirstOrDefault(u => u.Status && u.Username == txtLgnUserName.Text && u.Password == txtLgnPassword.Text);
+            string crypt = Encryption.Encrypt(txtLgnPassword.Text);
+            User user = _context.Users.FirstOrDefault(u => u.Status && u.Username == txtLgnUserName.Text && u.Password == crypt);
 
             if (user!=null)
             {
                 if(user.Level == userLevel.Moderator)
                 {
-                    Dashboard dashboard = new Dashboard(this,txtLgnUserName.Text);
+                    Dashboard dashboard = new Dashboard(this,txtLgnUserName.Text,_context);
                          dashboard.Show();
                 }
                 else

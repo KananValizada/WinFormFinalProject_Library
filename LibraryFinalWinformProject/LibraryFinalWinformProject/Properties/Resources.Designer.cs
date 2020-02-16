@@ -83,6 +83,16 @@ namespace LibraryFinalWinformProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bookreturn {
+            get {
+                object obj = ResourceManager.GetObject("bookreturn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap istockphoto_499198960_612x612 {
             get {
                 object obj = ResourceManager.GetObject("istockphoto-499198960-612x612", resourceCulture);
@@ -126,6 +136,16 @@ namespace LibraryFinalWinformProject.Properties {
         internal static System.Drawing.Bitmap man2 {
             get {
                 object obj = ResourceManager.GetObject("man2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap muRA4E {
+            get {
+                object obj = ResourceManager.GetObject("muRA4E", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

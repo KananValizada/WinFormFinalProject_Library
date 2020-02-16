@@ -7,13 +7,13 @@ namespace LibraryFinalWinformProject.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.0")]
-    public sealed partial class Classroom : IMigrationMetadata
+    public sealed partial class FinalTests : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Classroom));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(FinalTests));
         
         string IMigrationMetadata.Id
         {
-            get { return "202002141532500_Classroom"; }
+            get { return "202002161412381_FinalTests"; }
         }
         
         string IMigrationMetadata.Source

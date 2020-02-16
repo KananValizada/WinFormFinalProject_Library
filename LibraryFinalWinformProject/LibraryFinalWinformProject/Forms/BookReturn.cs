@@ -30,7 +30,7 @@ namespace LibraryFinalWinformProject.Forms
                 return;
             }
             dgvRtrn.Rows.Clear();
-            var Costmrs = _context.Orders.Include("Person").Include("Book").Where(u => u.Person.Name.Contains(txtSearchCostumerName.Text));
+            var Costmrs = _context.Orders.Include("Person").Include("Book").Where(u => u.Person.Name.Contains(txtSearchCostumerName.Text) && u.Status ==true);
             foreach (var i in Costmrs)
             {
                 double dfrnce = 0;
@@ -59,14 +59,17 @@ namespace LibraryFinalWinformProject.Forms
         {
             if(e.ColumnIndex == 7 && !(dgvRtrn.Rows[e.RowIndex].Cells[6].Value is null))
             {
-                string row = dgvRtrn.Rows[e.RowIndex].Cells[4].Value.ToString();
-                MessageBox.Show(dgvRtrn.Rows[e.RowIndex].Cells[6].Value.ToString());
-                Order returnedOrder = _context.Orders.Include("Book").Include("Person").FirstOrDefault(u => u.Deadline.ToString() == row);
+              
+               string row = dgvRtrn.Rows[e.RowIndex].Cells[0].Value.ToString();
+                
+                Order returnedOrder = _context.Orders.Include("Book").Include("Person").FirstOrDefault(u => u.Id.ToString() ==row && u.Status == true);
                 returnedOrder.Person.BooksHave--;
                 returnedOrder.Book.AvaliableQuantity++;
-                _context.Orders.Remove(returnedOrder);
+                returnedOrder.Status = false;
                 _context.SaveChanges();
                 MessageBox.Show("Kitab Qaytarildi");
+                txtSearchCostumerName.Clear();
+                dgvRtrn.Rows.Clear();
             }
         }
     }

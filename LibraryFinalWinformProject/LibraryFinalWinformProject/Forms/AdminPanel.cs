@@ -36,5 +36,11 @@ namespace LibraryFinalWinformProject.Forms
             Reports rpts = new Reports();
             rpts.Show();
         }
+
+        private void changeUser_Click(object sender, EventArgs e)
+        {
+            UpdateUser Us = new UpdateUser();
+            Us.Show();
+        }
     }
 }

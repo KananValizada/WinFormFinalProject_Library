@@ -81,7 +81,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(524, 312);
+            this.BackgroundImage = global::LibraryFinalWinformProject.Properties.Resources.new_background;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(524, 323);
             this.Controls.Add(this.dgvTomorrowOrders);
             this.Name = "DeadlineTomorrow";
             this.Text = "DeadlineTomorrow";

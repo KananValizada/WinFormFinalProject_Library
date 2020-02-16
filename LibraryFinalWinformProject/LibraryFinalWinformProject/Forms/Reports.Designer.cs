@@ -41,6 +41,7 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtTotalEarn = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnExport = new System.Windows.Forms.Button();
@@ -91,6 +92,7 @@
             // 
             // dgvReports
             // 
+            this.dgvReports.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvReports.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvReports.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -99,7 +101,9 @@
             this.Column5,
             this.Column6,
             this.Column3,
-            this.Column4});
+            this.Column4,
+            this.Column8});
+            this.dgvReports.Enabled = false;
             this.dgvReports.Location = new System.Drawing.Point(21, 183);
             this.dgvReports.Name = "dgvReports";
             this.dgvReports.Size = new System.Drawing.Size(649, 150);
@@ -140,6 +144,11 @@
             // 
             this.Column4.HeaderText = "Book Prise ";
             this.Column4.Name = "Column4";
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Status";
+            this.Column8.Name = "Column8";
             // 
             // txtTotalEarn
             // 
@@ -207,5 +216,6 @@
         private System.Windows.Forms.TextBox txtTotalEarn;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnExport;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
     }
 }

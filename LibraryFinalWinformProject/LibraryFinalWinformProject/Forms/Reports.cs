@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,7 +34,7 @@ namespace LibraryFinalWinformProject.Forms
             foreach (var i in orders)
             {
                 sum = sum + i.Book.Prise;
-                dgvReports.Rows.Add(i.Id, i.Person.Name, i.Person.Surname, i.Person.PhoneNumber,i.Person.Email, i.Book.Name, i.Book.Prise);
+                dgvReports.Rows.Add(i.Id, i.Person.Name, i.Person.Surname, i.Person.PhoneNumber,i.Person.Email, i.Book.Name, i.Book.Prise,i.Status);
                 
             }
             txtTotalEarn.Text = sum.ToString();
@@ -46,34 +47,48 @@ namespace LibraryFinalWinformProject.Forms
                  MessageBox.Show("Cedvelde melumat yoxdur");
                 return;
             }
-                
-            
-            Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
-            Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
-            Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
-            worksheet = workbook.Sheets["Sheet1"];
-            worksheet = workbook.ActiveSheet;
-            worksheet.Name = "OrderList";
-            for(int i = 1; i < dgvReports.Columns.Count + 1; i++)
-            {
-                worksheet.Cells[1,i] = dgvReports.Columns[i - 1].HeaderText;
-            }
-            for (int i = 0; i < dgvReports.Rows.Count-1; i++)
-            {
-                for(int j = 0; j < dgvReports.Columns.Count; j++)
+
+                //Export to excel at selected location
+                SaveFileDialog sfd = new SaveFileDialog();
+                sfd.Filter = "Excel Documents (*.xls)|*.xls";
+                sfd.FileName = "export.xls";
+                if (sfd.ShowDialog() == DialogResult.OK)
                 {
-                    worksheet.Cells[i + 2, j + 1] = dgvReports.Rows[i].Cells[j].Value.ToString();
+
+                    ToCsV(dgvReports, sfd.FileName);
                 }
+
             }
 
-            var saveFileDialogue = new SaveFileDialog();
-            saveFileDialogue.FileName = "output";
-            saveFileDialogue.DefaultExt = "xlsx";
-            if (saveFileDialogue.ShowDialog() == DialogResult.OK)
+            //Make en excel file
+            private void ToCsV(DataGridView dGV, string filename)
             {
-                workbook.SaveAs(saveFileDialogue.FileName, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
-            }
-            app.Quit();
+                string stOutput = "";
+                // Export titles:
+                string sHeaders = "";
+
+                for (int j = 0; j < dGV.Columns.Count; j++)
+                    sHeaders = sHeaders.ToString() + Convert.ToString(dGV.Columns[j].HeaderText) + "\t";
+                stOutput += sHeaders + "\r\n";
+                // Export data.
+                for (int i = 0; i < dGV.RowCount - 1; i++)
+                {
+                    string stLine = "";
+                    for (int j = 0; j < dGV.Rows[i].Cells.Count; j++)
+                        stLine = stLine.ToString() + Convert.ToString(dGV.Rows[i].Cells[j].Value) + "\t";
+                    stOutput += stLine + "\r\n";
+                }
+
+                Encoding utf16 = Encoding.GetEncoding(1254);
+                byte[] output = utf16.GetBytes(stOutput);
+                FileStream fs = new FileStream(filename, FileMode.Create);
+                BinaryWriter bw = new BinaryWriter(fs);
+
+                bw.Write(output, 0, output.Length); //write the encoded file
+                bw.Flush();
+                bw.Close();
+                fs.Close();
+            
         }
     }
 }

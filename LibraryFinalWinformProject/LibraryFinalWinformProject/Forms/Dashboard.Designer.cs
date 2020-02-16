@@ -36,6 +36,7 @@
             this.bookAuthorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuAddAuthor = new System.Windows.Forms.ToolStripMenuItem();
             this.bookListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuUpdateBook = new System.Windows.Forms.ToolStripMenuItem();
             this.orToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuCreateAnOrder = new System.Windows.Forms.ToolStripMenuItem();
             this.menuListOfOrders = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,7 +49,15 @@
             this.returnBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnExit = new System.Windows.Forms.Button();
             this.lblUserName = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.txtRefresh = new System.Windows.Forms.Button();
+            this.lblOrderCount = new System.Windows.Forms.Label();
+            this.lblCustCount = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.mnuUpCust = new System.Windows.Forms.ToolStripMenuItem();
             this.menuReturnBook.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuReturnBook
@@ -73,7 +82,8 @@
             this.MenuAddBook,
             this.bookJanrasToolStripMenuItem,
             this.bookAuthorsToolStripMenuItem,
-            this.bookListToolStripMenuItem});
+            this.bookListToolStripMenuItem,
+            this.menuUpdateBook});
             this.booksToolStripMenuItem.Name = "booksToolStripMenuItem";
             this.booksToolStripMenuItem.Size = new System.Drawing.Size(55, 21);
             this.booksToolStripMenuItem.Text = "Books";
@@ -81,7 +91,7 @@
             // MenuAddBook
             // 
             this.MenuAddBook.Name = "MenuAddBook";
-            this.MenuAddBook.Size = new System.Drawing.Size(180, 22);
+            this.MenuAddBook.Size = new System.Drawing.Size(152, 22);
             this.MenuAddBook.Text = "Add Book";
             this.MenuAddBook.Click += new System.EventHandler(this.MenuAddBook_Click);
             // 
@@ -90,7 +100,7 @@
             this.bookJanrasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuAddJanra});
             this.bookJanrasToolStripMenuItem.Name = "bookJanrasToolStripMenuItem";
-            this.bookJanrasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bookJanrasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.bookJanrasToolStripMenuItem.Text = "BookJanras";
             // 
             // menuAddJanra
@@ -105,7 +115,7 @@
             this.bookAuthorsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuAddAuthor});
             this.bookAuthorsToolStripMenuItem.Name = "bookAuthorsToolStripMenuItem";
-            this.bookAuthorsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bookAuthorsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.bookAuthorsToolStripMenuItem.Text = "BookAuthors";
             // 
             // menuAddAuthor
@@ -118,9 +128,16 @@
             // bookListToolStripMenuItem
             // 
             this.bookListToolStripMenuItem.Name = "bookListToolStripMenuItem";
-            this.bookListToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bookListToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.bookListToolStripMenuItem.Text = "BookList";
             this.bookListToolStripMenuItem.Click += new System.EventHandler(this.bookListToolStripMenuItem_Click);
+            // 
+            // menuUpdateBook
+            // 
+            this.menuUpdateBook.Name = "menuUpdateBook";
+            this.menuUpdateBook.Size = new System.Drawing.Size(152, 22);
+            this.menuUpdateBook.Text = "Update Book";
+            this.menuUpdateBook.Click += new System.EventHandler(this.menuUpdateBook_Click);
             // 
             // orToolStripMenuItem
             // 
@@ -134,7 +151,7 @@
             // menuCreateAnOrder
             // 
             this.menuCreateAnOrder.Name = "menuCreateAnOrder";
-            this.menuCreateAnOrder.Size = new System.Drawing.Size(180, 22);
+            this.menuCreateAnOrder.Size = new System.Drawing.Size(171, 22);
             this.menuCreateAnOrder.Text = "Create an Order";
             this.menuCreateAnOrder.Click += new System.EventHandler(this.menuCreateAnOrder_Click);
             // 
@@ -145,7 +162,7 @@
             this.menuDeadlineTomorrow,
             this.menuOverdue});
             this.menuListOfOrders.Name = "menuListOfOrders";
-            this.menuListOfOrders.Size = new System.Drawing.Size(180, 22);
+            this.menuListOfOrders.Size = new System.Drawing.Size(171, 22);
             this.menuListOfOrders.Text = "List of Orders";
             // 
             // menuDeadlineToday
@@ -173,7 +190,8 @@
             // 
             this.costumersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuAddNewCostumer,
-            this.menuCostumerList});
+            this.menuCostumerList,
+            this.mnuUpCust});
             this.costumersToolStripMenuItem.Name = "costumersToolStripMenuItem";
             this.costumersToolStripMenuItem.Size = new System.Drawing.Size(82, 21);
             this.costumersToolStripMenuItem.Text = "Costumers";
@@ -219,9 +237,79 @@
             this.lblUserName.ForeColor = System.Drawing.Color.White;
             this.lblUserName.Location = new System.Drawing.Point(570, 3);
             this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(50, 18);
+            this.lblUserName.Size = new System.Drawing.Size(80, 18);
             this.lblUserName.TabIndex = 2;
-            this.lblUserName.Text = "label1";
+            this.lblUserName.Text = "userName";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.txtRefresh);
+            this.panel1.Controls.Add(this.lblOrderCount);
+            this.panel1.Controls.Add(this.lblCustCount);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel1.ForeColor = System.Drawing.Color.Transparent;
+            this.panel1.Location = new System.Drawing.Point(557, 310);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(210, 116);
+            this.panel1.TabIndex = 3;
+            // 
+            // txtRefresh
+            // 
+            this.txtRefresh.BackColor = System.Drawing.Color.Black;
+            this.txtRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.txtRefresh.Location = new System.Drawing.Point(132, 86);
+            this.txtRefresh.Name = "txtRefresh";
+            this.txtRefresh.Size = new System.Drawing.Size(65, 27);
+            this.txtRefresh.TabIndex = 1;
+            this.txtRefresh.Text = "Yenile";
+            this.txtRefresh.UseVisualStyleBackColor = false;
+            this.txtRefresh.Click += new System.EventHandler(this.txtRefresh_Click);
+            // 
+            // lblOrderCount
+            // 
+            this.lblOrderCount.AutoSize = true;
+            this.lblOrderCount.Location = new System.Drawing.Point(181, 52);
+            this.lblOrderCount.Name = "lblOrderCount";
+            this.lblOrderCount.Size = new System.Drawing.Size(16, 18);
+            this.lblOrderCount.TabIndex = 0;
+            this.lblOrderCount.Text = "0";
+            // 
+            // lblCustCount
+            // 
+            this.lblCustCount.AutoSize = true;
+            this.lblCustCount.Location = new System.Drawing.Point(181, 17);
+            this.lblCustCount.Name = "lblCustCount";
+            this.lblCustCount.Size = new System.Drawing.Size(16, 18);
+            this.lblCustCount.TabIndex = 0;
+            this.lblCustCount.Text = "0";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(13, 52);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(111, 18);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Aktiv Sifarisler";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(161, 18);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Bazadaki Musteri sayi";
+            // 
+            // mnuUpCust
+            // 
+            this.mnuUpCust.Name = "mnuUpCust";
+            this.mnuUpCust.Size = new System.Drawing.Size(190, 22);
+            this.mnuUpCust.Text = "Update Customer";
+            this.mnuUpCust.Click += new System.EventHandler(this.mnuUpCust_Click);
             // 
             // Dashboard
             // 
@@ -230,6 +318,7 @@
             this.BackgroundImage = global::LibraryFinalWinformProject.Properties.Resources._888655_download_free_library_background_images_1920x1200;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblUserName);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.menuReturnBook);
@@ -240,6 +329,8 @@
             this.Text = "Dashboard";
             this.menuReturnBook.ResumeLayout(false);
             this.menuReturnBook.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -267,5 +358,13 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.ToolStripMenuItem returnBookToolStripMenuItem;
         private System.Windows.Forms.Label lblUserName;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblOrderCount;
+        private System.Windows.Forms.Label lblCustCount;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button txtRefresh;
+        private System.Windows.Forms.ToolStripMenuItem menuUpdateBook;
+        private System.Windows.Forms.ToolStripMenuItem mnuUpCust;
     }
 }

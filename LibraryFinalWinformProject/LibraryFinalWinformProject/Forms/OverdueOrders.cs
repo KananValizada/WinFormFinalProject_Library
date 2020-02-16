@@ -26,7 +26,7 @@ namespace LibraryFinalWinformProject.Forms
 
             var todayOrders = _context.Orders.Include("Person")
                 .Include("Book")
-                .Where(u => u.Deadline<today);
+                .Where(u => u.Deadline<today && u.Status ==true);
             foreach (var i in todayOrders)
             {
                 dgvOverdueOrders.Rows.Add(i.Person.Id,

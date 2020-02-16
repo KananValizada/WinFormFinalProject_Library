@@ -28,7 +28,7 @@ namespace LibraryFinalWinformProject.Forms
             {
                 dgvFindCtm.Rows.Clear();
             }
-            var Costmrs = _context.People.Where(u=>u.Name.Contains(txtFindCost.Text));
+            var Costmrs = _context.People.Where(u=>u.PhoneNumber.Contains(txtFindCost.Text));
             foreach(var i in Costmrs)
             {
                 dgvFindCtm.Rows.Clear();
@@ -46,12 +46,20 @@ namespace LibraryFinalWinformProject.Forms
         }
 
         private void dgvFindCtm_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            string _selectedId = dgvFindCtm.Rows[e.RowIndex].Cells[0].Value.ToString();
+        { 
+
+            if (dgvFindCtm.Rows[e.RowIndex].Cells[0].Value is null)
+            { 
+                MessageBox.Show("Musteri tapilmayib");
+                return;
+            }
             if (e.ColumnIndex == 6)
             {
+                string _selectedId = dgvFindCtm.Rows[e.RowIndex].Cells[0].Value.ToString();
                 FinishOrder FoForm = new FinishOrder(_context,_selectedId,_username);
                 FoForm.Show();
+                txtFindCost.Clear();
+                dgvFindCtm.Rows.Clear();
             }
         }
     }

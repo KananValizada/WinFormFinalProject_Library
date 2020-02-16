@@ -115,11 +115,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(121, 9);
+            this.label2.Location = new System.Drawing.Point(101, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 13);
+            this.label2.Size = new System.Drawing.Size(112, 13);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Kitab Secin";
+            this.label2.Text = "Search Book by name";
             // 
             // txtBookSrc
             // 
@@ -242,7 +242,7 @@
             this.Controls.Add(this.txtBookSrc);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.gvBookSrc);
-            this.Text = "FinishOrder";
+            this.Text = "Create Order";
             ((System.ComponentModel.ISupportInitialize)(this.gvBookSrc)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

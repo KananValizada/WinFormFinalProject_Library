@@ -24,13 +24,13 @@ namespace LibraryFinalWinformProject.Forms
         }
         public void FillBooks()
         {
-            var book = _context.Books;
+            var book = _context.Books.Include("Author").Include("Janra");
             foreach(var i in book)
             {
                 dgvBooks.Rows.Add(i.id,
                     i.Name,
-                    i.AuthorId,
-                    i.JanraId,
+                    i.Author.Name,
+                    i.Janra.Name,
                     i.PurchaseDate,
                     i.Prise,
                     i.Quantity,

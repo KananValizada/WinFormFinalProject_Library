@@ -49,7 +49,12 @@ namespace LibraryFinalWinformProject.Forms
         
         private void gvBookSrc_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.ColumnIndex == 7)
+            if (gvBookSrc.Rows[e.RowIndex].Cells[0].Value is null)
+            {
+                MessageBox.Show("Kitab tapilmayib");
+                return;
+            }
+            if (e.ColumnIndex == 7)
             {
             string Name = _context.People.FirstOrDefault(u => u.Id.ToString() == _slcId).Name.ToString()+" "+
                 _context.People.FirstOrDefault(u => u.Id.ToString() == _slcId).Surname.ToString();
@@ -69,12 +74,18 @@ namespace LibraryFinalWinformProject.Forms
                 MessageBox.Show("Kitab Secilmeyib");
                 return;
             }
+            if (txtFoDeadline.Value < txtFoOrderDate.Value)
+            {
+                MessageBox.Show("Deadline satis tarixinden sonra olmalidir!");
+                return;
+            }
 
             Book book = _context.Books.FirstOrDefault(u => u.Name == txtFoBookName.Text);
             User user = _context.Users.FirstOrDefault(u => u.Username == _username);
             Person person= _context.People.FirstOrDefault(u=>u.Id.ToString()==_slcId);
             Order order = new Order()
             {
+                Status = true,
                 PersonId = Convert.ToInt32(_slcId),
                 BookId = book.id,
                 UserId = user.id,
@@ -97,6 +108,7 @@ namespace LibraryFinalWinformProject.Forms
             _context.SaveChanges();
             MessageBox.Show("Sifaris ugurla yaradildi!!!");
             gvBookSrc.Rows.Clear();
+            txtBookSrc.Text = "";
             
         }
     }

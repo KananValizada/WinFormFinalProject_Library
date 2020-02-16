@@ -36,14 +36,14 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Find = new System.Windows.Forms.Label();
             this.Column7 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Find = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFindCtm)).BeginInit();
             this.SuspendLayout();
             // 
             // txtFindCost
             // 
-            this.txtFindCost.Location = new System.Drawing.Point(110, 88);
+            this.txtFindCost.Location = new System.Drawing.Point(225, 88);
             this.txtFindCost.Name = "txtFindCost";
             this.txtFindCost.Size = new System.Drawing.Size(100, 20);
             this.txtFindCost.TabIndex = 0;
@@ -97,19 +97,19 @@
             this.Column6.HeaderText = "Books Have";
             this.Column6.Name = "Column6";
             // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Give Book";
+            this.Column7.Name = "Column7";
+            // 
             // Find
             // 
             this.Find.AutoSize = true;
             this.Find.Location = new System.Drawing.Point(30, 91);
             this.Find.Name = "Find";
-            this.Find.Size = new System.Drawing.Size(74, 13);
+            this.Find.Size = new System.Drawing.Size(162, 13);
             this.Find.TabIndex = 2;
-            this.Find.Text = "Find Costumer";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Give Book";
-            this.Column7.Name = "Column7";
+            this.Find.Text = "Find Costumer by Phone Number";
             // 
             // Create_Order
             // 
@@ -120,7 +120,7 @@
             this.Controls.Add(this.dgvFindCtm);
             this.Controls.Add(this.txtFindCost);
             this.Name = "Create_Order";
-            this.Text = "Create_Order";
+            this.Text = "Find Customer";
             ((System.ComponentModel.ISupportInitialize)(this.dgvFindCtm)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

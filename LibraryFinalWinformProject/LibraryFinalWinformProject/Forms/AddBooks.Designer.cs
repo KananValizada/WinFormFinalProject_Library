@@ -168,6 +168,7 @@
             // 
             // txtPriceBook
             // 
+            this.txtPriceBook.DecimalPlaces = 2;
             this.txtPriceBook.Location = new System.Drawing.Point(141, 225);
             this.txtPriceBook.Name = "txtPriceBook";
             this.txtPriceBook.Size = new System.Drawing.Size(163, 20);

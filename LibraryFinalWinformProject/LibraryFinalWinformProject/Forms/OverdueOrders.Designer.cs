@@ -81,6 +81,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::LibraryFinalWinformProject.Properties.Resources.new_background;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(479, 321);
             this.Controls.Add(this.dgvOverdueOrders);
             this.Name = "OverdueOrders";

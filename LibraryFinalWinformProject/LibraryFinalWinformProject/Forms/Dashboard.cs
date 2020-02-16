@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LibraryFinalWinformProject.Data;
 
 namespace LibraryFinalWinformProject.Forms
 {
@@ -14,20 +15,29 @@ namespace LibraryFinalWinformProject.Forms
     {
         private readonly Login _login;
         private readonly string _username;
+        private readonly LMSdbContext _context;
         
-        public Dashboard( Login login,string username)
+        public Dashboard( Login login,string username,LMSdbContext context)
         {
-
+            _context = context;
             InitializeComponent();
             _login = login;
             _login.Hide();
             _username = username;
             lblUserName.Text = "Welcome! " + username;
+            FillNumb();
+            
         }
 
+        private void FillNumb()
+        {
+            lblCustCount.Text = _context.People.Count(u => u.Id > 0).ToString();
+            lblOrderCount.Text = _context.Orders.Count(u => u.Status == true ).ToString();
+        }
         private void MenuAddBook_Click(object sender, EventArgs e)
         {
-            AddBooks addBooks = new AddBooks();
+            AddBooks addBooks = 
+                new AddBooks();
             addBooks.Show();
         }
 
@@ -94,6 +104,23 @@ namespace LibraryFinalWinformProject.Forms
         {
             BookReturn BrForm = new BookReturn();
             BrForm.Show();
+        }
+
+        private void txtRefresh_Click(object sender, EventArgs e)
+        {
+            FillNumb();
+        }
+
+        private void menuUpdateBook_Click(object sender, EventArgs e)
+        {
+            UpdateBook UbForm = new UpdateBook();
+            UbForm.Show();
+        }
+
+        private void mnuUpCust_Click(object sender, EventArgs e)
+        {
+            UpCustForm UcForm = new UpCustForm();
+            UcForm.Show();
         }
     }
 }

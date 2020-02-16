@@ -156,7 +156,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.IconPassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IconName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IconPlane)).EndInit();

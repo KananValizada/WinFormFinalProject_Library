@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using LibraryFinalWinformProject.Data;
 using LibraryFinalWinformProject.Models;
+using LibraryFinalWinformProject.Classes;
 
 namespace LibraryFinalWinformProject
 {
@@ -108,13 +109,14 @@ namespace LibraryFinalWinformProject
                 MessageBox.Show("Level secin");
                 return;
             }
+            string encPassword = Encryption.Encrypt(txtLgnPassword.Text);
             if(cmbStatus.Text =="Admin" || cmbStatus.Text == "Moderator")
             {
                 User user = new User()
                 {
                     Fullname = txtFullNam.Text,
                     Username = txtRgsUserName.Text,
-                    Password = txtLgnPassword.Text,
+                    Password = encPassword,
                     Email = txtMail.Text,
                     Level = (cmbStatus.Text == "Admin") ? userLevel.Admin : userLevel.Moderator,
                     Status = true

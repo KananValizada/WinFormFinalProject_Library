@@ -46,7 +46,7 @@
             this.Column3,
             this.Column4,
             this.Column7});
-            this.dgvTodayOrders.Location = new System.Drawing.Point(12, 43);
+            this.dgvTodayOrders.Location = new System.Drawing.Point(22, 50);
             this.dgvTodayOrders.Name = "dgvTodayOrders";
             this.dgvTodayOrders.Size = new System.Drawing.Size(448, 150);
             this.dgvTodayOrders.TabIndex = 0;
@@ -81,7 +81,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(518, 334);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackgroundImage = global::LibraryFinalWinformProject.Properties.Resources.new_background;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(518, 361);
             this.Controls.Add(this.dgvTodayOrders);
             this.Name = "DeadlineTodayOrders";
             this.Text = "DeadlineTodayOrders";

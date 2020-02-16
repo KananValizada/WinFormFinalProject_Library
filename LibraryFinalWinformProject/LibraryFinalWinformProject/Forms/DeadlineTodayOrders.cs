@@ -31,7 +31,7 @@ namespace LibraryFinalWinformProject.Forms
                 .Include("Book")
                 .Where(u => u.Deadline.Year == today.Year
                         && u.Deadline.Month == today.Month
-                        && u.Deadline.Day == today.Day);
+                        && u.Deadline.Day == today.Day && u.Status ==true);
             foreach(var i in todayOrders)
             {
                 dgvTodayOrders.Rows.Add(i.Person.Id,
